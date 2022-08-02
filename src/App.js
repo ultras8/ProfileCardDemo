@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import ProfileCard from './components/ProfileCard'
 
 function App() {
+  const mapContact = new Map();
+  mapContact.set("line","https://line.me/ti/p/bM4oXEFbI9");
+  mapContact.set("mail","mailwans1112@gmail.com");
+  mapContact.set("phone","0841195690");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='background'>
+      <ProfileCard
+        name = "Stefan T."
+        status = "Front-end Developer"
+        contact = {mapContact}
+      />
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
